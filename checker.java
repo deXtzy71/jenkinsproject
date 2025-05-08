@@ -1,18 +1,16 @@
-import java.util.Scanner;
-
 public class checker {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        if (args.length == 0) {
+            System.out.println("Please provide a number as a command-line argument.");
+            return;
+        }
 
-        System.out.print("Enter a number: ");
-        int number = scanner.nextInt();
+        int number = Integer.parseInt(args[0]);
 
         if (number % 2 == 0) {
             System.out.println(number + " is even.");
         } else {
             System.out.println(number + " is odd.");
         }
-
-        scanner.close();
     }
 }
